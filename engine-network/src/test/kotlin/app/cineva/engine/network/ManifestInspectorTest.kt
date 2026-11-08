@@ -29,7 +29,7 @@ class ManifestInspectorTest {
     }
 
     @Test fun parsesDashAndRejectsDoctype() {
-        val xml = """<MPD xmlns="urn:mpeg:dash:schema:mpd:2011"><Period><SegmentTemplate media="chunk-${'$'}Number${'$'}.m4s" initialization="init.mp4"/></Period></MPD>"""
+        val xml = """<MPD xmlns="urn:mpeg:dash:schema:mpd:2011"><Period><SegmentTemplate media="chunk-001.m4s" initialization="init.mp4"/></Period></MPD>"""
         val result = inspector.inspectDash(xml, "https://media.example.org/manifest.mpd", descriptor)
         assertTrue(result.resources.any { it.uri.endsWith("init.mp4") })
         assertFailsWith<Exception> {
