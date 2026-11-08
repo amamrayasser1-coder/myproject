@@ -12,10 +12,6 @@ jobs:
         with:
           distribution: temurin
           java-version: "17"
-      - name: Accept Android SDK licenses and install API 35
-        run: |
-          yes | sdkmanager --licenses
-          sdkmanager "platforms;android-35" "build-tools;35.0.0"
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: "8.14.4"
