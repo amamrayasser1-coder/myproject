@@ -1,0 +1,2 @@
+# Contributing
+Keep providers isolated and independently testable. Every provider declares an exact host allowlist. Add fixture-based parser tests; avoid live-site tests in normal CI. Do not add DRM, paywall, CAPTCHA or anti-bot bypasses. Never commit API keys, cookies, signed URLs, private source lists or user data. Keep Android-specific code out of engine-core. Update docs when public contracts change.
